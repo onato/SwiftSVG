@@ -62,9 +62,10 @@ class GithubViewController: UIViewController {
             }),
             CellItem(render: { (cellSize) -> UIView in
                 
-                let svgURL = URL(string: "https://openclipart.org/download/181651/manhammock.svg")!
+                let svgURL = URL(string: "https://dev.w3.org/SVG/tools/svgweb/samples/svg-files/android.svg")!
                 let hammock = UIView(SVGURL: svgURL) { (svgLayer) in
-                    svgLayer.fillColor = UIColor(red:0.52, green:0.16, blue:0.32, alpha:1.00).cgColor
+                    svgLayer.fillColor = UIColor.brown.cgColor
+                    svgLayer.strokeColor = svgLayer.fillColor
                     svgLayer.resizeToFit(CGRect(x: 0, y: 0, width: cellSize.width, height: cellSize.height))
                 }
                 return hammock
